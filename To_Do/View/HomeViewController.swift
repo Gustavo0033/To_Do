@@ -61,8 +61,8 @@ class HomeViewController: UIViewController {
         let identifier = "notificacao-matinal"
         let tittle = "Lembrete de tarefas"
         let body = "Não esqueça de fazer sua tarefa!"
-        let hour = 15
-        let minute = 35
+        let hour = 12
+        let minute = 30
         let idDaily = true
         
         let notificationCenter = UNUserNotificationCenter.current()
