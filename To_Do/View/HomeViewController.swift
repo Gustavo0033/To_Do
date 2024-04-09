@@ -61,8 +61,10 @@ class HomeViewController: UIViewController {
         let identifier = "notificacao-matinal"
         let tittle = "Lembrete de tarefas"
         let body = "Não esqueça de fazer sua tarefa!"
-        let hour = 12
-        let minute = 30
+        let hourMorning = 12
+        let minuteMorning = 30
+        let hourAfternoon = 15
+        let minuteAfternoon = 00
         let idDaily = true
         
         let notificationCenter = UNUserNotificationCenter.current()
@@ -74,8 +76,10 @@ class HomeViewController: UIViewController {
         
         let calendar = Calendar.current
         var dateComponents = DateComponents(calendar: calendar, timeZone: TimeZone.current)
-        dateComponents.hour = hour
-        dateComponents.minute = minute
+        dateComponents.hour = hourMorning
+        dateComponents.minute = minuteMorning
+        dateComponents.hour = hourAfternoon
+        dateComponents.minute = minuteAfternoon
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: idDaily)
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
