@@ -1,0 +1,11 @@
+workflows:
+  ToDo-workflow:
+    name: ToDo Pipiline
+    scripts:
+     -  name: CICD Started
+        script: echo "Welcome to your CICD set up"
+    publishing:
+        email:
+            recipients:
+                - gu2003.mendonca48@gmail.com
+
